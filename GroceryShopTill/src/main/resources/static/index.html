@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocery Shop UI</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<h1>Grocery Shop Till</h1>
+
+<!-- Add Item Form -->
+<form id="addItemForm">
+    <h2>Add Item</h2>
+    <label for="newItemName">Item Name:</label>
+    <input type="text" id="newItemName" name="newItemName" required>
+
+    <label for="newItemPrice">Item Price:</label>
+    <input type="number" id="newItemPrice" name="newItemPrice" required>
+
+    <button type="button" onclick="addItem()">Add Item</button>
+    <div id="messageItem"></div>
+</form>
+
+<!-- Delete Item Form -->
+<form id="deleteItemForm">
+    <h2>Delete Item</h2>
+    <label for="itemName">Item Name:</label>
+    <input type="text" id="itemName" name="itemName" required>
+
+    <button type="button" onclick="deleteItem()">Delete Item</button>
+    <div id="messageItemDelete"></div>
+</form>
+
+<!-- Get Items Form -->
+<form id="getItemsForm">
+    <h2>Get Items</h2>
+    <button type="button" onclick="getItems()">Get Items</button>
+    <div id="messageGetItems"></div>
+</form>
+
+<!-- Add Deal Form -->
+<form id="addDealForm">
+    <h2>Add Deal</h2>
+    <label for="newDealType">Deal Type:</label>
+    <select id="newDealType" name="newDealType" required>
+        <option value="2 for 3">2 for 3</option>
+        <option value="buy 1 get 1 half price">Buy 1 Get 1 Half Price</option>
+    </select>
+
+    <label for="newDealItems">Deal Items (comma-separated):</label>
+    <input type="text" id="newDealItems" name="newDealItems" required>
+
+    <button type="button" onclick="addDeal()">Add Deal</button>
+    <div id="messageDeal"></div>
+</form>
+
+<!-- Delete Deals Form -->
+<form id="deleteDealForm">
+    <h2>Delete Deal</h2>
+    <label for="dealType">Deal Type:</label>
+    <input type="text" id="dealType" name="dealType" required>
+
+    <button type="button" onclick="deleteDeal()">Delete Deal</button>
+    <div id="messageDealDelete"></div>
+</form>
+
+<!-- Get Deals Form -->
+<form id="getDealsForm">
+    <h2>Get Deals</h2>
+    <button type="button" onclick="getDeals()">Get Deals</button>
+    <div id="messageGetDeals"></div>
+</form>
+
+
+<!-- Scan Items Form -->
+<form id="scanItemsForm">
+    <h2>Scan Items</h2>
+    <label for="scannedItems">Scanned Items (comma-separated):</label>
+    <input type="text" id="scannedItems" name="scannedItems" required>
+
+    <button type="button" onclick="scanItems()">Scan Items</button>
+    <div id="resultMessage"></div>
+</form>
+
+<script src="script.js"></script>
+</body>
+</html>
